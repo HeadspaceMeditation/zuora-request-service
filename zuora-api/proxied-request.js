@@ -14,9 +14,13 @@ const isObject = require('lodash/isObject');
  * @return {[Object]}                suitable object for making http requests from nice-request
  */
 const mergeOptions = (requestOptions, extraOptions) => {
-  const result = isObject(extraOptions) ? Object.assign(requestOptions, extraOptions) : requestOptions;
+  const result = Object.assign(
+    {},
+    config.defaultRequestOptions(),
+    requestOptions,
+  );
 
-  return result;
+  return isObject(extraOptions) ? Object.assign(result, extraOptions) : result;
 };
 
 /**
@@ -29,14 +33,20 @@ const mergeOptions = (requestOptions, extraOptions) => {
  * @return {[Promise]}             a fullfilled or rejected promise
  */
 module.exports = (method, path, extraOptions) =>
-  nice.request(mergeOptions({
-    url: `${config.baseUrl()}/${path}`,
-    method,
-    metricTag: path,
-    headers: config.headers()
-  }, extraOptions))
-  .tap(result => {
-    if (has(result, 'success') && get(result, 'success') === false) {
-      throw result;
-    }
-  });
+  nice
+    .request(
+      mergeOptions(
+        {
+          url: `${config.baseUrl()}/${path}`,
+          method,
+          metricTag: path,
+          headers: config.headers(),
+        },
+        extraOptions,
+      ),
+    )
+    .tap(result => {
+      if (has(result, 'success') && get(result, 'success') === false) {
+        throw result;
+      }
+    });

@@ -1,5 +1,3 @@
-/* eslint no-unused-expressions: 0, init-declarations: 0, prefer-arrow-callback: 0, func-names: 0, max-statements: 0, global-require: 0 */
-
 'use strict';
 
 describe('zuora-config', function() {
@@ -12,11 +10,10 @@ describe('zuora-config', function() {
     accessIdStub = 'someId';
     secretKeyStub = 'someKey';
 
-
     headersStub = {
       apiaccesskeyid: accessIdStub,
       apisecretaccesskey: secretKeyStub,
-      'content-Type': 'application/json'
+      'content-Type': 'application/json',
     };
 
     config = require('./zoura-config');
