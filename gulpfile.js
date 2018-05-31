@@ -77,20 +77,3 @@ gulp.task('lint-watch', ['lint'], () => {
   );
 });
 
-/**
- * Checks for the presence of a pre push hook. If it doesn't exist the file is copied
- * into the correct location.
- */
-gulp.task('enforce-quality', () => {
-  fileExists('.git/hooks/pre-push')
-    .then(fsStatData => {
-      console.log('Pre-Push Hook Already Exists');
-    })
-    .catch(fsError => {
-      return gulp
-        .src('misc/pre-push-hook.sh')
-        .pipe(rename('/hooks/pre-push'))
-        .pipe(chmod(755))
-        .pipe(gulp.dest('.git'));
-    });
-});
