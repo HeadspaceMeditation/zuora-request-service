@@ -22,13 +22,6 @@ jobs:
             yarn
 
       - run:
-          name: Maybe greenkeeper update
-          command: |
-            if [[ "${CIRCLE_BRANCH}" =~ greenkeeper* ]]; then
-                greenkeeper-lockfile-update
-            fi
-
-      - run:
           name: Run tests
           command: |
             yarn test:unit
@@ -43,13 +36,6 @@ jobs:
 
       - store_test_results:
           path: test-output/
-
-      - run:
-          name: Maybe greenkeeper upload
-          command: |
-            if [[ "${CIRCLE_BRANCH}" =~ greenkeeper* ]]; then
-                greenkeeper-lockfile-upload
-            fi
 
       - add_ssh_keys
 
