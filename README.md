@@ -16,7 +16,7 @@ This service provides several conveniences for using the zuora api:
 The setup method should be invoked when your server is being initialized with these arguments:
 * keyId: your zuora supplied apiAccessKeyId
 * accessKey: your zuora supplied apiSecretAccessKey
-* isProd: boolean - boolean indicating if the code is in production environment or not. Controls the base URL for zuora.  
+* isProd: boolean - boolean indicating if the code is in production environment or not. Controls the base URL for zuora.
 * logger: optional - an object with a .info function for logging.
 
 
@@ -137,6 +137,8 @@ const requestOptions = {
   * [email](https://www.zuora.com/developer/api-reference/#operation/GETEmailHistoryVOs): `zuora.api().notificationHistory.email(requestOptions)`
 * operations
   * [invoiceCollect](https://www.zuora.com/developer/api-reference/#operation/POST_TransactionInvoicePayment): `zuora.api().operations.invoiceCollect(requestOptions)`
+* payments
+  * [paymentRefund](https://www.zuora.com/developer/api-reference/#operation/POST_RefundPayment): `zuora.api().payments.refundPayment(paymentId, requestOptions)`
 * paymentMethods
   * [create](https://www.zuora.com/developer/api-reference/#operation/POSTPaymentMethod): `zuora.api().paymentMethods.create(requestOptions)`
   * [find](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentMethods): `zuora.api().paymentMethods.find(accountKey, requestOptions)`

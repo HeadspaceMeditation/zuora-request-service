@@ -9,4 +9,5 @@ module.exports = {
 
   // https://rest.zuora.com/v1/transactions/payments/accounts/{account-key}
   getPayments: (accountKey, requestOptions) => request('GET', `transactions/payments/accounts/${accountKey}`, requestOptions)
+
 };
