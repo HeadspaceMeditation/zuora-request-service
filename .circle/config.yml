@@ -31,7 +31,7 @@ jobs:
       - run:
           name: Run tests
           command: |
-            yarn test
+            yarn test:unit
 
       - save_cache:
           key: yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
