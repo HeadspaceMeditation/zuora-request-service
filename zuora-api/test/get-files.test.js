@@ -11,7 +11,7 @@ describe('get files', function() {
   let requestOptionsStub;
 
   beforeEach(function() {
-    requestStub = sinon.stub();
+    requestStub = sinon.stub().returns({then: () => undefined});
     idStub = 1234; // eslint-disable-line no-magic-numbers
     requestOptionsStub = {value: 'somevalue'};
 
