@@ -4,10 +4,10 @@
 
 const proxyquire = require('proxyquire');
 
-describe('payments', function() {
+describe('invoiceAdjustments', function() {
   let idStub;
   let requestStub;
-  let payments;
+  let invoiceAdjustments;
   let requestOptionsStub;
 
   beforeEach(function() {
@@ -15,13 +15,13 @@ describe('payments', function() {
     idStub = 1234;  // eslint-disable-line no-magic-numbers
     requestOptionsStub = {value: 'someValue'};
 
-    payments = proxyquire('../payments', {
+    invoiceAdjustments = proxyquire('../invoice-adjustments', {
       './proxied-request': requestStub
     });
   });
 
-  it('refundPayments calls proxy request with the correct paramaters', function() {
-    payments.refundPayment(idStub, requestOptionsStub);
-    expect(requestStub).to.have.been.calledWithExactly('POST', 'payments/1234/refunds', requestOptionsStub);
+  it('create calls proxy request with the correct paramaters', function() {
+    invoiceAdjustments.create(requestOptionsStub);
+    expect(requestStub).to.have.been.calledWithExactly('POST', 'object/invoice-adjustment', requestOptionsStub);
   });
 });

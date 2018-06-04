@@ -12,6 +12,7 @@ const connections = require('./connections');
 const getFiles = require('./get-files');
 const hmacSignatures = require('./hmac-signatures');
 const hostedPages = require('./hosted-pages');
+const invoiceAdjustments = require('./invoice-adjustments');
 const journalEntries = require('./journal-entries');
 const journalRuns = require('./journal-runs');
 const massUpdater = require('./journal-entries');
@@ -46,6 +47,7 @@ module.exports = {
   getFiles,
   hmacSignatures,
   hostedPages,
+  invoiceAdjustments,
   journal: {
     entries: journalEntries,
     runs: journalRuns
