@@ -9,5 +9,5 @@ module.exports = {
       'GET',
       `files/${fileId}`,
       Object.assign({responseType: 'stream'}, requestOptions),
-    ),
+    ).then(resp => resp.data),
 };
