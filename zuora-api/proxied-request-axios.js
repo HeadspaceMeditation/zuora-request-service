@@ -20,13 +20,15 @@ const mergeOptions = (requestOptions, extraOptions) => {
 };
 
 /**
- * Proxied Request gives zurora request service a central access point to nice request and
- * an entry point to proxy/intercept responses from the zuora API. Intercepts 200 responses where the
- * success is marked false and rethrows them as errors.
+ * Proxied Request gives zurora request service a central access point to axios requests
+ *
  * @param  {[String]} method      HTTP request method, GET, POST, PUT, DELETE
  * @param  {[String]} path        URI for zuora API resource
- * @param  {[Object]} extraOptions extra request options i.e queryStrings, body, maxTries etc.
- * @return {[Promise]}             a fullfilled or rejected promise
+ * @param  {[Object]} extraOptions extra request options https://github.com/axios/axios#request-config
+ * @return {[Promise]}a fullfilled or rejected promise https://github.com/axios/axios#response-schema
+ *
+ * TODO Add retry support
+ * TODO Intercept 200 responses where success is marked false and rethrow them as errors
  */
 module.exports = (method, path, extraOptions) =>
   axios(
