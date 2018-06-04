@@ -20,8 +20,13 @@ describe('payments', function() {
     });
   });
 
-  it('refundPayments calls proxy request with the correct paramaters', function() {
+  it('refundPayment calls proxy request with the correct paramaters', function() {
     payments.refundPayment(idStub, requestOptionsStub);
     expect(requestStub).to.have.been.calledWithExactly('POST', 'payments/1234/refunds', requestOptionsStub);
+  });
+
+  it('unapplyPayment calls proxy request with the correct paramaters', function() {
+    payments.unapplyPayment(idStub, requestOptionsStub);
+    expect(requestStub).to.have.been.calledWithExactly('PUT', 'payments/1234/unapply', requestOptionsStub);
   });
 });

@@ -138,7 +138,8 @@ const requestOptions = {
 * operations
   * [invoiceCollect](https://www.zuora.com/developer/api-reference/#operation/POST_TransactionInvoicePayment): `zuora.api().operations.invoiceCollect(requestOptions)`
 * payments
-  * [paymentRefund](https://www.zuora.com/developer/api-reference/#operation/POST_RefundPayment): `zuora.api().payments.refundPayment(paymentId, requestOptions)`
+  * [refundPayment](https://www.zuora.com/developer/api-reference/#operation/POST_RefundPayment): `zuora.api().payments.refundPayment(paymentId, requestOptions)`
+  * [unapplyPayment](https://www.zuora.com/developer/api-reference/#operation/PUT_UnapplyPayment): `zuora.api().payments.unapplyPayment(paymentId, requestOptions)`
 * paymentMethods
   * [create](https://www.zuora.com/developer/api-reference/#operation/POSTPaymentMethod): `zuora.api().paymentMethods.create(requestOptions)`
   * [find](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentMethods): `zuora.api().paymentMethods.find(accountKey, requestOptions)`
