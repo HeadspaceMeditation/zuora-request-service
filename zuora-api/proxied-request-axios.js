@@ -20,7 +20,9 @@ const mergeOptions = (requestOptions, extraOptions) => {
 };
 
 /**
- * Proxied Request gives zurora request service a central access point to axios requests
+ * Proxied Request gives zurora request service a central access point to axios.
+ * Currently using this for binary file support (files API) but also is an
+ * upgrade path to replace nice-request going forward
  *
  * @param  {[String]} method      HTTP request method, GET, POST, PUT, DELETE
  * @param  {[String]} path        URI for zuora API resource
@@ -28,7 +30,8 @@ const mergeOptions = (requestOptions, extraOptions) => {
  * @return {[Promise]}a fullfilled or rejected promise https://github.com/axios/axios#response-schema
  *
  * TODO Add retry support
- * TODO Intercept 200 responses where success is marked false and rethrow them as errors
+ * TODO Intercept 200 responses where success is marked false and rethrow them
+ * as errors
  */
 module.exports = (method, path, extraOptions) =>
   axios(
