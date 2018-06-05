@@ -146,6 +146,8 @@ const requestOptions = {
   * [delete](https://www.zuora.com/developer/api-reference/#operation/DELETE_PaymentMethods): `zuora.api().paymentMethods.delete(paymentMethodId, requestOptions)`
 * quotesDocument
   * [document](https://www.zuora.com/developer/api-reference/#operation/POSTQuoteDoc): `zuora.api().quotesDocument.document(requestOptions)`
+* refund
+  * [create](https://www.zuora.com/developer/api-reference/#operation/Object_POSTRefund): `zuora.api().refunds.create(requestOptions)`
 * revenue
   * events
     * [find](https://www.zuora.com/developer/api-reference/#tag/Revenue%20Events): `zuora.api().revenue.events.find(rsNumber, requestOptions)`
