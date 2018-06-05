@@ -4,28 +4,28 @@
 
 const proxyquire = require('proxyquire');
 
-describe('invoiceAdjustments', function() {
+describe('refunds', function() {
   let idStub;
   let requestStub;
-  let invoiceAdjustments;
+  let refunds;
   let requestOptionsStub;
 
   beforeEach(function() {
     requestStub = sinon.stub();
     idStub = 1234;  // eslint-disable-line no-magic-numbers
     requestOptionsStub = {
-        Amount: 9.99,
-        InvoiceNumber: 'INV00000000',
-        Type: 'Credit',
+        PaymentId: 'paymentId',
+        Type: 'Electronic',
+        Amount: 12,
     };
 
-    invoiceAdjustments = proxyquire('../invoice-adjustments', {
+    refunds = proxyquire('../refunds', {
       './proxied-request': requestStub
     });
   });
 
   it('create calls proxy request with the correct paramaters', function() {
-    invoiceAdjustments.create(requestOptionsStub);
-    expect(requestStub).to.have.been.calledWithExactly('POST', 'object/invoice-adjustment', requestOptionsStub);
+    refunds.create(requestOptionsStub);
+    expect(requestStub).to.have.been.calledWithExactly('POST', 'object/refund', requestOptionsStub);
   });
 });

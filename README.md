@@ -139,9 +139,6 @@ const requestOptions = {
   * [email](https://www.zuora.com/developer/api-reference/#operation/GETEmailHistoryVOs): `zuora.api().notificationHistory.email(requestOptions)`
 * operations
   * [invoiceCollect](https://www.zuora.com/developer/api-reference/#operation/POST_TransactionInvoicePayment): `zuora.api().operations.invoiceCollect(requestOptions)`
-* payments
-  * [refundPayment](https://www.zuora.com/developer/api-reference/#operation/POST_RefundPayment): `zuora.api().payments.refundPayment(paymentId, requestOptions)`
-  * [unapplyPayment](https://www.zuora.com/developer/api-reference/#operation/PUT_UnapplyPayment): `zuora.api().payments.unapplyPayment(paymentId, requestOptions)`
 * paymentMethods
   * [create](https://www.zuora.com/developer/api-reference/#operation/POSTPaymentMethod): `zuora.api().paymentMethods.create(requestOptions)`
   * [find](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentMethods): `zuora.api().paymentMethods.find(accountKey, requestOptions)`
@@ -149,6 +146,8 @@ const requestOptions = {
   * [delete](https://www.zuora.com/developer/api-reference/#operation/DELETE_PaymentMethods): `zuora.api().paymentMethods.delete(paymentMethodId, requestOptions)`
 * quotesDocument
   * [document](https://www.zuora.com/developer/api-reference/#operation/POSTQuoteDoc): `zuora.api().quotesDocument.document(requestOptions)`
+* refund
+  * [create](https://www.zuora.com/developer/api-reference/#operation/Object_POSTRefund): `zuora.api().refunds.create(requestOptions)`
 * revenue
   * events
     * [find](https://www.zuora.com/developer/api-reference/#tag/Revenue%20Events): `zuora.api().revenue.events.find(rsNumber, requestOptions)`
