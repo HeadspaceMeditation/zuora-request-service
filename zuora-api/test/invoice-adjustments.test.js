@@ -13,7 +13,11 @@ describe('invoiceAdjustments', function() {
   beforeEach(function() {
     requestStub = sinon.stub();
     idStub = 1234;  // eslint-disable-line no-magic-numbers
-    requestOptionsStub = {value: 'someValue'};
+    requestOptionsStub = {
+        Amount: 9.99,
+        InvoiceNumber: 'INV00000000',
+        Type: 'Credit',
+    };
 
     invoiceAdjustments = proxyquire('../invoice-adjustments', {
       './proxied-request': requestStub
