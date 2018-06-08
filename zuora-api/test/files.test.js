@@ -11,12 +11,12 @@ describe('get files', function() {
   let requestOptionsStub;
 
   beforeEach(function() {
-    requestStub = sinon.stub().returns({then: () => undefined});
-    idStub = 1234; // eslint-disable-line no-magic-numbers
+    requestStub = sinon.stub();
+    idStub = 1234;
     requestOptionsStub = {value: 'somevalue'};
 
-    files = proxyquire('../get-files', {
-      './proxied-request-axios': requestStub,
+    files = proxyquire('../files', {
+      './proxied-request': requestStub
     });
   });
 
@@ -25,7 +25,7 @@ describe('get files', function() {
     expect(requestStub).to.have.been.calledWithExactly(
       'GET',
       'files/1234',
-      Object.assign({responseType: 'stream'}, requestOptionsStub),
+      requestOptionsStub,
     );
   });
 });
