@@ -9,7 +9,7 @@ const attachments = require('./attachments');
 const catalog = require('./catalog');
 const chargeRevenueSummaries = require('./charge-revenue-summaries');
 const connections = require('./connections');
-const getFiles = require('./get-files');
+const files = require('./files');
 const hmacSignatures = require('./hmac-signatures');
 const hostedPages = require('./hosted-pages');
 const invoiceAdjustments = require('./invoice-adjustments');
@@ -44,7 +44,7 @@ module.exports = {
   catalog,
   chargeRevenueSummaries,
   connections,
-  getFiles,
+  files,
   hmacSignatures,
   hostedPages,
   invoiceAdjustments,
