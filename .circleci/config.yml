@@ -8,7 +8,7 @@ jobs:
           NODE_ENV: test
           TEST_FAIL_ON_ERROR: true
           TSLINT_FAIL_ON_ERROR: true
-    working_directory: ~/proxy
+    working_directory: ~/zuora-request-service
     steps:
       - checkout
 
@@ -46,9 +46,15 @@ jobs:
               npm publish
             fi
 
+workflows:
+  version: 2
+  build-test-publish:
+    jobs:
+      - build:
+          context: org-global
+
 experimental:
   notify:
     branches:
       only:
         - master
-        - develop
