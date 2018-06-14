@@ -33,7 +33,7 @@ describe('zuora request service', function() {
     defaultRequestOptionsStub = 'some options';
 
     zuora = proxyquire('./index.js', {
-      'nice-request': niceStub,
+      '@headspace/nice-request': niceStub,
       './zuora-api': zouraApiStub,
       './zoura-config': configStub,
     });

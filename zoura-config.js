@@ -23,20 +23,20 @@ exports.setup = (keyId, accessKey, isProd, defaultOptions) => {
 exports.headers = () => {
   if (isNull(apiaccesskeyid)) {
     throw new TypeError(
-      'an api access key id is required to authenticate with zuora',
+      'an api access key id is required to authenticate with zuora'
     );
   }
 
   if (isNull(apisecretaccesskey)) {
     throw new TypeError(
-      'an api secret access key is required to authenticate with zuora',
+      'an api secret access key is required to authenticate with zuora'
     );
   }
 
   return {
     apiaccesskeyid,
     apisecretaccesskey,
-    'content-Type': 'application/json',
+    'content-Type': 'application/json'
   };
 };
 

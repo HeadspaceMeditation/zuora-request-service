@@ -1,6 +1,6 @@
 'use strict';
 
-const nice = require('nice-request');
+const nice = require('@headspace/nice-request');
 const get = require('lodash/get');
 const has = require('lodash/has');
 const config = require('../zoura-config');
@@ -17,7 +17,7 @@ const mergeOptions = (requestOptions, extraOptions) => {
   const result = Object.assign(
     {},
     config.defaultRequestOptions(),
-    requestOptions,
+    requestOptions
   );
 
   return isObject(extraOptions) ? Object.assign(result, extraOptions) : result;
@@ -42,8 +42,8 @@ module.exports = (method, path, extraOptions) =>
           metricTag: path,
           headers: config.headers(),
         },
-        extraOptions,
-      ),
+        extraOptions
+      )
     )
     .tap(result => {
       if (has(result, 'success') && get(result, 'success') === false) {

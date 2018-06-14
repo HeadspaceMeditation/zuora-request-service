@@ -23,7 +23,7 @@ describe('proxied request', function() {
     };
 
     proxiedRequest = proxyquire('../proxied-request', {
-      'nice-request': niceStub,
+      '@headspace/nice-request': niceStub,
       '../zoura-config': configStub
     });
   });
