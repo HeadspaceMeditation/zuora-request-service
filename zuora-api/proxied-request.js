@@ -1,6 +1,6 @@
 'use strict';
 
-const nice = require('nice-request');
+const nice = require('@headspace/nice-request');
 const get = require('lodash/get');
 const has = require('lodash/has');
 const config = require('../zoura-config');

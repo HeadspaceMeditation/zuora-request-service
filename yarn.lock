@@ -2,6 +2,16 @@
 # yarn lockfile v1
 
 
+"@headspace/nice-request@^1.3.2-rc1":
+  version "1.3.2-rc1"
+  resolved "https://registry.yarnpkg.com/@headspace/nice-request/-/nice-request-1.3.2-rc1.tgz#34c2a26c3503603e95b83cfcd80c2c972ed1ee43"
+  dependencies:
+    bluebird "^3.4.1"
+    lodash "^4.16.6"
+    nice-http-error "^1.1.0"
+    request "^2.78.0"
+    request-promise "^4.1.1"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -2486,16 +2496,6 @@ next-tick@1:
 nice-http-error@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/nice-http-error/-/nice-http-error-1.1.0.tgz#c958397722d129c8d829a3e41006db700b3b432a"
-
-nice-request@^1.1.0:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/nice-request/-/nice-request-1.3.1.tgz#8a7bdc7ba6cc2782b53b506a61dcb248563c6b1d"
-  dependencies:
-    bluebird "^3.4.1"
-    lodash "^4.16.6"
-    nice-http-error "^1.1.0"
-    request "^2.78.0"
-    request-promise "^4.1.1"
 
 nock@^8.0.0:
   version "8.2.2"

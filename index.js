@@ -1,6 +1,6 @@
 'use strict';
 
-const nice = require('nice-request');
+const nice = require('@headspace/nice-request');
 const zuoraApi = require('./zuora-api');
 const config = require('./zoura-config');
 
