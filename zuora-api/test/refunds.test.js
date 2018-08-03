@@ -31,6 +31,6 @@ describe('refunds', function() {
 
   it('getRefunds calls proxy request is called correctly', function() {
     refunds.getRefunds();
-    expect(requestStub).to.have.been.calledWithExactly('GET', 'object/refunds');
+    expect(requestStub).to.have.been.calledWithExactly('GET', 'refunds');
   });
 });
