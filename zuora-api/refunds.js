@@ -8,5 +8,5 @@ module.exports = {
   create: (requestOptions) => request('POST', `object/refund`, requestOptions),
 
   // https://www.zuora.com/developer/api-reference/#operation/GET_Refunds
-  getRefunds: () => request('GET', `object/refunds`),
+  getRefunds: () => request('GET', `refunds`),
 };
