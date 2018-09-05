@@ -33,11 +33,11 @@ exports.headers = () => {
     );
   }
 
-  return {
+  return Object.assign({}, {
     apiaccesskeyid,
     apisecretaccesskey,
     'content-Type': 'application/json'
-  };
+  }, defaultRequestOptions.additionalHeaders );
 };
 
 exports.baseUrl = () => baseUrl;

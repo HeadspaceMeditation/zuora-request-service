@@ -19,6 +19,11 @@ describe('zuora-config', function() {
     config = require('./zoura-config');
   });
 
+  // clean up state setup
+  after(function() {
+    config.setup(accessIdStub, secretKeyStub, false);
+  })
+
   it('throws an error when apiaccesskeyid is null', function() {
     expect(function() {
       config.headers();
@@ -44,5 +49,15 @@ describe('zuora-config', function() {
   it('returns the headers object when apiaccesskeyid and apisecretaccesskey are set', function() {
     config.setup(accessIdStub, secretKeyStub, false);
     expect(config.headers()).to.deep.equal(headersStub);
+  });
+
+  it('returns the addionaal headers', function() {
+    const defaultOptions = { additionalHeaders: { 'zuora-version': 200 }};
+    const expectedHeaders = {
+      ...headersStub,
+      'zuora-version': 200
+    };
+    config.setup(accessIdStub, secretKeyStub, false, defaultOptions);
+    expect(config.headers()).to.deep.equal(expectedHeaders);
   });
 });
