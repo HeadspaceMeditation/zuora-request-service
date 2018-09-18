@@ -28,9 +28,4 @@ describe('refunds', function() {
     refunds.create(requestOptionsStub);
     expect(requestStub).to.have.been.calledWithExactly('POST', 'object/refund', requestOptionsStub);
   });
-
-  it('getRefunds calls proxy request is called correctly', function() {
-    refunds.getRefunds();
-    expect(requestStub).to.have.been.calledWithExactly('GET', 'refunds');
-  });
 });

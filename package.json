@@ -1,6 +1,6 @@
 {
   "name": "@headspace/zuora-request-service",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A client to interact with the zuora rest api",
   "main": "index.js",
   "scripts": {
