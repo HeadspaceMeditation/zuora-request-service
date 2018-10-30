@@ -117,6 +117,8 @@ const requestOptions = {
   * [list](https://www.zuora.com/developer/api-reference/#tag/Hosted%20Pages): `zuora.api().hostedPages.list(requestOptions)`
 * invoiceAdjustments
   * [create](https://www.zuora.com/developer/api-reference/#operation/Object_POSTInvoiceAdjustment): `zuora.api().invoiceAdjustments.create(requestOptions)`
+* invoiceItems 
+  * [find](https://www.zuora.com/developer/api-reference/#operation/GET_InvoiceItems): `zuora.api().invoiceItems.find(invoiceId, requestOptions)`
 * journal
   * entries
     * [create](https://www.zuora.com/developer/api-reference/#operation/POSTJournalEntry): `zuora.api().journal.entries.create(requestOptions)`
