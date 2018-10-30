@@ -13,7 +13,7 @@ describe('journal runs', function() {
 
   beforeEach(function() {
     requestStub = sinon.stub();
-    requestOptionsStub = {value: 'somevalue'};
+    requestOptionsStub = { value: 'somevalue' };
     idStub = 1234; // eslint-disable-line no-magic-numbers
 
     invoiceItems = proxyquire('../invoice-items', {
@@ -23,6 +23,6 @@ describe('journal runs', function() {
 
   it('find calls proxy request with the correct paramaters', function() {
     invoiceItems.find(idStub, requestOptionsStub);
-    expect(requestStub).to.have.been.calledWithExactly('POST', 'invoices/1234/items', requestOptionsStub);
+    expect(requestStub).to.have.been.calledWithExactly('GET', 'invoices/1234/items', requestOptionsStub);
   });
 });
