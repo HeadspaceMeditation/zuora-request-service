@@ -22,7 +22,7 @@ describe('journal runs', function() {
   });
 
   it('find calls proxy request with the correct paramaters', function() {
-    invoiceItems.find(requestOptionsStub);
-    expect(idStub, requestStub).to.have.been.calledWithExactly('POST', `invoices/${idStub}/items`, requestOptionsStub);
+    invoiceItems.find(idStub, requestOptionsStub);
+    expect(requestStub).to.have.been.calledWithExactly('POST', 'invoices/1234/items', requestOptionsStub);
   });
 });
