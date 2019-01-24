@@ -117,7 +117,7 @@ const requestOptions = {
   * [list](https://www.zuora.com/developer/api-reference/#tag/Hosted%20Pages): `zuora.api().hostedPages.list(requestOptions)`
 * invoiceAdjustments
   * [create](https://www.zuora.com/developer/api-reference/#operation/Object_POSTInvoiceAdjustment): `zuora.api().invoiceAdjustments.create(requestOptions)`
-* invoiceItems 
+* invoiceItems
   * [find](https://www.zuora.com/developer/api-reference/#operation/GET_InvoiceItems): `zuora.api().invoiceItems.find(invoiceId, requestOptions)`
 * journal
   * entries
@@ -142,6 +142,7 @@ const requestOptions = {
 * operations
   * [invoiceCollect](https://www.zuora.com/developer/api-reference/#operation/POST_TransactionInvoicePayment): `zuora.api().operations.invoiceCollect(requestOptions)`
 * paymentMethods
+  * [create_paypal](https://www.zuora.com/developer/api-reference/#operation/POST_PaymentMethods): `zuora.api().paymentMethods.create_paypal(requestOptions)`
   * [create](https://www.zuora.com/developer/api-reference/#operation/POSTPaymentMethod): `zuora.api().paymentMethods.create(requestOptions)`
   * [find](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentMethods): `zuora.api().paymentMethods.find(accountKey, requestOptions)`
   * [update](https://www.zuora.com/developer/api-reference/#operation/PUT_PaymentMethods): `zuora.api().paymentMethods.update(paymentMethodId, requestOptions)`

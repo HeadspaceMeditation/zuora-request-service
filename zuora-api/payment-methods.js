@@ -4,6 +4,9 @@ const request = require('./proxied-request');
 
 module.exports = {
 
+  // https://www.zuora.com/developer/api-reference/#operation/POST_PaymentMethods
+  create_paypal: requestOptions => request('POST', 'payment-methods', requestOptions),
+
   // https://rest.zuora.com/v1/payment-methods/credit-cards
   create: requestOptions => request('POST', 'payment-methods/credit-cards', requestOptions),
 

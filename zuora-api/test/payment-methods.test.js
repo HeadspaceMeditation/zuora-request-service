@@ -20,6 +20,11 @@ describe('payment-methods', function() {
     });
   });
 
+  it('create_paypal calls proxy request with the correct paramaters', function() {
+    paymentMethods.create_paypal(requestOptionsStub);
+    expect(requestStub).to.have.been.calledWithExactly('POST', 'payment-methods', requestOptionsStub);
+  });
+
   it('create calls proxy request with the correct paramaters', function() {
     paymentMethods.create(requestOptionsStub);
     expect(requestStub).to.have.been.calledWithExactly('POST', 'payment-methods/credit-cards', requestOptionsStub);
