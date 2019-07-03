@@ -19,6 +19,7 @@ const journalRuns = require('./journal-runs');
 const massUpdater = require('./journal-entries');
 const notificationHistory = require('./notification-history');
 const operations = require('./operations');
+const payments = require('./payments');
 const paymentMethods = require('./payment-methods');
 const quotesDocument = require('./quotes-document');
 const refunds = require('./refunds');
