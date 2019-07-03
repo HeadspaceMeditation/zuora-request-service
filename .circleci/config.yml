@@ -7,7 +7,13 @@ jobs:
         environment:
           NODE_ENV: test
     working_directory: ~/zuora-request-service
+    aliases:
+        - &add_authority
+          name: Install dep
+          command: apk add ca-certificates git openssh
+
     steps:
+      - run: *add_authority
       - checkout
 
       - restore_cache:
