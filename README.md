@@ -141,6 +141,8 @@ const requestOptions = {
   * [email](https://www.zuora.com/developer/api-reference/#operation/GETEmailHistoryVOs): `zuora.api().notificationHistory.email(requestOptions)`
 * operations
   * [invoiceCollect](https://www.zuora.com/developer/api-reference/#operation/POST_TransactionInvoicePayment): `zuora.api().operations.invoiceCollect(requestOptions)`
+* payments
+  * [find](https://www.zuora.com/developer/api-reference/#tag/Payments): `zuora.api().payments.find(paymentId, requestOptions)`
 * paymentMethods
   * [create_paypal](https://www.zuora.com/developer/api-reference/#operation/POST_PaymentMethods): `zuora.api().paymentMethods.create_paypal(requestOptions)`
   * [create](https://www.zuora.com/developer/api-reference/#operation/POSTPaymentMethod): `zuora.api().paymentMethods.create(requestOptions)`

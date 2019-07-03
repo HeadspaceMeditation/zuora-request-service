@@ -3,11 +3,17 @@ version: 2
 jobs:
   build:
     docker:
-      - image: headspace/hs-node:8.9 # primary container
+      - image: node:10-alpine # primary container
         environment:
           NODE_ENV: test
     working_directory: ~/zuora-request-service
+    aliases:
+        - &add_authority
+          name: Install dep
+          command: apk add ca-certificates git openssh
+
     steps:
+      - run: *add_authority
       - checkout
 
       - restore_cache:
