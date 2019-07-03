@@ -57,6 +57,7 @@ module.exports = {
   massUpdater,
   notificationHistory,
   operations,
+  payments,
   paymentMethods,
   quotesDocument,
   refunds,
