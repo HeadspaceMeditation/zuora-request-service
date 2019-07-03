@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: headspace/hs-node:10 # primary container
+      - image: node:10-alpine # primary container
         environment:
           NODE_ENV: test
     working_directory: ~/zuora-request-service
