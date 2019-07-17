@@ -10,6 +10,8 @@ module.exports = {
   // https://rest.zuora.com/v1/payment-methods/credit-cards
   create: requestOptions => request('POST', 'payment-methods/credit-cards', requestOptions),
 
+  decryption: requestOptions => request('POST', 'payment-methods/decryption', requestOptions),
+
   // https://rest.zuora.com/v1/payment-methods/credit-cards/accounts/{account-key}
   find: (accountKey, requestOptions) => request('GET', `payment-methods/credit-cards/accounts/${accountKey}`, requestOptions),
 
