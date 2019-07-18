@@ -146,6 +146,7 @@ const requestOptions = {
 * paymentMethods
   * [create_paypal](https://www.zuora.com/developer/api-reference/#operation/POST_PaymentMethods): `zuora.api().paymentMethods.create_paypal(requestOptions)`
   * [create](https://www.zuora.com/developer/api-reference/#operation/POSTPaymentMethod): `zuora.api().paymentMethods.create(requestOptions)`
+  * [decryption](https://www.zuora.com/developer/api-reference/#operation/POST_PaymentMethodsDecryption): `zuora.api().paymentMethods.decryption(requestOptions)`
   * [find](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentMethods): `zuora.api().paymentMethods.find(accountKey, requestOptions)`
   * [update](https://www.zuora.com/developer/api-reference/#operation/PUT_PaymentMethods): `zuora.api().paymentMethods.update(paymentMethodId, requestOptions)`
   * [delete](https://www.zuora.com/developer/api-reference/#operation/DELETE_PaymentMethods): `zuora.api().paymentMethods.delete(paymentMethodId, requestOptions)`
