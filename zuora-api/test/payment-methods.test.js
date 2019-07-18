@@ -13,7 +13,7 @@ describe('payment-methods', function() {
   beforeEach(function() {
     requestStub = sinon.stub();
     idStub = 1234;  // eslint-disable-line no-magic-numbers
-    requestOptionsStub = {value: 'somevalue'};
+    requestOptionsStub = { value: 'somevalue' };
 
     paymentMethods = proxyquire('../payment-methods', {
       './proxied-request': requestStub
@@ -43,5 +43,10 @@ describe('payment-methods', function() {
   it('delete calls proxy request with the correct paramaters', function() {
     paymentMethods.delete(idStub, requestOptionsStub);
     expect(requestStub).to.have.been.calledWithExactly('DELETE', 'payment-methods/1234', requestOptionsStub);
+  });
+
+  it('decryption calls proxy request with correct parameters', function() {
+	paymentMethods.decryption(requestOptionsStub);
+	expect(requestStub).to.have.been.calledWithExactly('POST', 'payment-methods/decryption', requestOptionsStub);
   });
 });
